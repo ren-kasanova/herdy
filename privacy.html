@@ -18,18 +18,24 @@
   <main>
     <p><a href="index.html">← Herdy support</a></p>
     <h1>Privacy policy</h1>
-    <p>Effective September 2, 2026</p>
-    <p>Herdy is a direct SSH and Mosh client. We do not operate a relay service, require a Herdy account, serve ads, or include analytics or tracking SDKs.</p>
+    <p>Effective with Herdy 1.2.0</p>
+    <p>Herdy connects your terminal directly to the SSH or Mosh hosts you configure. Optional agent-attention notifications use Herdy’s notification relay and Apple or Google’s push delivery service. Herdy does not require an account, serve ads, or include analytics or tracking SDKs.</p>
     <h2>Information stored on your device</h2>
     <p>Saved hosts, preferences, terminal history, and credentials are stored on your device. Sensitive credentials use the secure storage provided by iOS or Android.</p>
     <h2>Connections you initiate</h2>
     <p>Herdy sends terminal input and selected files directly to the remote host you configure. Those connections are governed by the host and network services you choose.</p>
+    <h2>Optional agent-attention notifications</h2>
+    <p>Notifications are off by default. If you enable them, Herdy registers a device push identifier and random installation identifier with its notification relay. The relay stores your selected alert categories and opaque identifiers for the saved hosts you choose to watch.</p>
+    <p>A watcher on each selected host sends the alert type, multiplexer and session names and identifiers, and agent and pane identifiers so tapping an alert can open the right agent. Session names are chosen by users and may contain project names or personal information. The relay forwards these routing names and identifiers to the push provider without storing the routing payload. Lock-screen alerts contain generic text.</p>
+    <p>The relay does not receive SSH passwords, private keys, terminal output, prompts, voice recordings, or files. Terminal connections remain direct to your chosen hosts.</p>
+    <p>Relay registrations expire after 30 days without refresh. Accepted event identifiers are retained for seven days to suppress duplicate retries. Turning notifications off deletes the device registration and host subscriptions at the relay; turning off one host revokes that subscription. Changes need a working network connection to be confirmed.</p>
+    <p>Push delivery uses Firebase Cloud Messaging and, on Apple devices, Apple Push Notification service. Firebase uses an installation identifier to deliver messages and may process technical service information such as IP addresses. Provider retention and deletion are separate from deletion of Herdy’s relay registration. See <a href="https://firebase.google.com/support/privacy">Firebase’s privacy and retention information</a> and <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>. Disabling alerts stops relay delivery and Firebase auto-initialization; it does not request deletion of the Firebase installation identifier.</p>
     <h2>Microphone and speech recognition</h2>
     <p>Voice input is optional. When used, audio and transcription may be processed by the speech-recognition service provided by your device or operating-system vendor under its own privacy terms. Herdy does not receive a separate copy.</p>
     <h2>Photos and files</h2>
     <p>Herdy accesses only photos or files you explicitly select for upload to your configured host.</p>
     <h2>Contact</h2>
-    <p>Questions can be sent to <a href="mailto:ren@kasanova.io">ren@kasanova.io</a>.</p>
+    <p>Questions can be sent to <a href="mailto:ren@ghostworkers.dev">ren@ghostworkers.dev</a>.</p>
   </main>
 </body>
 </html>
